@@ -29,4 +29,41 @@ public class CalculatorService {
         
         return sum;
      }
+     
+     @WebMethod(operationName = "mul")
+     // @WebParam annotation indicates parameters to method coming from SOAP request.
+     public int mul(@WebParam(name = "num1") int num1, 
+                   @WebParam(name = "num2") int num2) {
+        
+        int mul ;
+        
+        mul = num1 * num2;
+        
+        return mul;
+     }
+     
+      @WebMethod(operationName = "div")
+     // @WebParam annotation indicates parameters to method coming from SOAP request.
+     public int div(@WebParam(name = "num1") int num1, 
+                   @WebParam(name = "num2") int num2) {
+        
+        int div ;
+        
+        div = num1 / num2;
+        
+        return div;
+     }
+     
+      
+      @WebMethod(operationName = "sub")
+     // @WebParam annotation indicates parameters to method coming from SOAP request.
+     public int sub(@WebParam(name = "num1") int num1, 
+                   @WebParam(name = "num2") int num2) {
+        
+        int sub ;
+        
+        sub = num1 - num2;
+        
+        return sub;
+     }
 }
